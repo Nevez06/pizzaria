@@ -1,4 +1,4 @@
-name: Build & deploy
+name: Build & Deploy
 
 on:
   push:
@@ -7,26 +7,23 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: |
-          npm run build
-          New-Item -ItemType File -Path build\.nojekyll -Force
+      - name: Build project
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GIT_USER: github-actions[bot]
-          GIT_EMAIL: github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
