@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pizzaria/static/css/main.3f164a4f.css",
+    "main.js": "/pizzaria/static/js/main.da4c2689.js",
+    "static/js/453.7bd3a646.chunk.js": "/pizzaria/static/js/453.7bd3a646.chunk.js",
+    "static/media/logo.webp": "/pizzaria/static/media/logo.e02f91e4f9575e95701d.webp",
+    "static/media/Life_Dia-da-Pizza-Veridiana-Margherita_8julho2021_Divulgacao.webp": "/pizzaria/static/media/Life_Dia-da-Pizza-Veridiana-Margherita_8julho2021_Divulgacao.b69f166a15c484316d2e.webp",
+    "index.html": "/pizzaria/index.html",
+    "main.3f164a4f.css.map": "/pizzaria/static/css/main.3f164a4f.css.map",
+    "main.da4c2689.js.map": "/pizzaria/static/js/main.da4c2689.js.map",
+    "453.7bd3a646.chunk.js.map": "/pizzaria/static/js/453.7bd3a646.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f164a4f.css",
+    "static/js/main.da4c2689.js"
+  ]
+}
