@@ -1,10 +1,10 @@
-import { db } from "../firebase/connection";
+/*import { db } from "../firebase/connection";
 import { getAuth, 
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     updateProfile,
     signOut
-} from "firebase/auth";
+} from "firebase/auth";*/
 import { useEffect,useState } from "react";
 export const useAuthentication = () => {
     const [error, setError] = useState(null);
