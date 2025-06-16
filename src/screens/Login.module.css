@@ -1,0 +1,146 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #fff8e1;
+    padding: 2rem;
+}
+
+.loginCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c0c00;
+}
+
+.logo svg {
+    font-size: 2rem;
+    color: #ff6b6b;
+}
+
+.loginCard h3 {
+    color: #2c0c00;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 15px;
+    color: #ff6b6b;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+}
+
+.togglePassword {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #2c0c00;
+    cursor: pointer;
+}
+
+.btnLogin {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+}
+
+.btnLogin:hover {
+    background-color: #e05555;
+    transform: translateY(-2px);
+}
+
+.btnLogin:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.errorMessage {
+    color: #e74c3c;
+    background-color: #fdecea;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.links a {
+    color: #ff6b6b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #e05555;
+    text-decoration: underline;
+}
+
+.links span {
+    color: #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .loginCard {
+        padding: 1.5rem;
+    }
+    
+    .inputGroup input {
+        padding: 10px 15px 10px 40px;
+    }
+}

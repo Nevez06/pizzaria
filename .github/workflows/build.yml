@@ -1,0 +1,19 @@
+name: Build & deploy
+on: [push]
+ 
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - name: Install
+      run: npm ci
+    - name: Build
+      run: |
+        npm run build
+        New-Item -ItemType File -Path build\.nojekyll -Force
+      timeout-minutes: 10
