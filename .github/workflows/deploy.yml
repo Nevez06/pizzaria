@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write   # 👈 Isso permite fazer push para outras branches (como gh-pages)
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,10 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (ignoring CI warnings)
+      - name: Build (ignore CI warnings)
         run: CI='' npm run build
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy
